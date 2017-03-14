@@ -1,0 +1,568 @@
+@font-face {
+    font-family: '888';
+    src: url(../../font/888-regular-webfont.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: '888' !important;
+    margin: 0;
+}
+
+html {
+    background-color: black;
+    overflow: auto;
+}
+
+body {
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+.red_or_black_game {
+    overflow: hidden;
+    background-color: black;
+}
+
+.steps {
+    width: 444px;
+    height: 617px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.game {
+    width: 100%;
+    position: relative;
+    padding-bottom: 0px;
+    z-index: 990;
+}
+
+.preLoader img {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    border: 2px solid #81f937;
+    position: absolute;
+    top: 45%;
+    left: 47%;
+    z-index: 1000;
+    position: fixed;
+}
+
+.header {
+    width: 100%;
+    max-width: 750px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1em;
+    font-size: 2em;
+    color: #fff;
+}
+
+.header .red {
+    color: red;
+}
+
+#logo {
+    display: block;
+    min-width: 70px;
+    max-width: 120px;
+    z-index: 991;
+    position: absolute;
+}
+
+img {
+    vertical-align: top;
+}
+
+.row {
+    max-width: 100.5rem !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.controlsWrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 1930px;
+}
+
+.game_controls {
+    max-width: 900px;
+    position: relative;
+    margin: 0 auto;
+    bottom: -156px;
+    z-index: 100;
+}
+
+.game_controls img {
+    max-height: 160px;
+}
+
+.game_controls div {
+    display: inline;
+    width: 100%;
+}
+
+.helpGuide, .redBtn, .autoPlay, .blackBtn, .helpW {
+    cursor: pointer;
+}
+
+.helpGuide img {
+    padding-bottom: 14px;
+}
+
+.main_control {
+    width: 100%;
+    max-width: 555px;
+    position: relative;
+    margin: 0 auto;
+    bottom: 5px;
+    z-index: 100;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+.main_control div {
+    float: left;
+}
+
+.cards {
+    width: 44%;
+    position: relative;
+}
+
+.cards img {
+    max-width: 125px;
+    width: 100%;
+    position: absolute;
+}
+
+.visible1 {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+
+.hidden1 {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.cardV, .cardX {
+    z-index: 7;
+    visibility: hidden;
+    margin-left: 122px;
+    margin-top: 0px;
+}
+
+IMG[src=''], IMG:not([src]) {
+    opacity: 0;
+}
+
+.card_1 {
+    z-index: 1;
+    opacity: 1;
+    margin-left: 50%;
+}
+
+.autoPlay {
+    width: 100%;
+    left: 20px;
+    max-width: 900px;
+    position: relative;
+    margin: 0 auto;
+    bottom: -72px;
+    z-index: 100;
+}
+
+.autoPlay img {
+    max-width: 79px;
+    width: 100%;
+    position: absolute;
+}
+
+.sentence-bg {
+    background: black;
+}
+
+.sentence {
+    font-weight: normal;
+    color: white;
+    width: 100%;
+    margin: 0;
+    margin-top: 0px;
+    padding-top: 1%;
+    padding-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.blackBtn {
+    width: 28%;
+    position: relative;
+    margin-left: 244px;
+    z-index: 100;
+}
+
+.blackBtn img {
+    max-width: 214px;
+    width: 100%;
+}
+
+.dependent_on_screen {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-image: url(../../Images/RED_or_BLACK_PC_bg.jpg);
+    width: 100%;
+    max-width: 1920px;
+    height: 735px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.helpW {
+    background-image: url(../../Images/RED_or_BLACK_PC_Help.png);
+    background-size: cover;
+    height: 735px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 0;
+    max-width: 1920px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 1000;
+    top: 0px;
+}
+
+@media screen and (max-width: 1220px) {
+
+    .dependent_on_screen, .helpW {
+        background-size: cover;
+        height: auto;
+        min-height: 600px;
+
+    }
+
+    #logo {
+        max-width: 80px;
+    }
+
+    .steps {
+        width: 479px;
+        height: 483px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 328%;
+    }
+
+    .cards img {
+        max-width: 125px;
+        width: 60%;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .cardV, .cardX, .card_1 {
+        margin-left: 83px;
+        margin-top: 1px;
+    }
+
+    img {
+        height: auto;
+    }
+
+    .game_controls {
+        max-width: 750px;
+        position: relative;
+        margin: 0 auto;
+        bottom: -160px;
+        padding-left: 18px;
+    }
+
+    .main_control {
+        width: 100%;
+        max-width: 555px;
+        position: relative;
+        margin: 0 auto;
+        bottom: -2px;
+        left: 50px;
+    }
+
+    .redBtn {
+        width: 26%;
+    }
+
+    .cards {
+        width: 30%;
+        position: relative;
+    }
+
+    .blackBtn {
+        width: 26%;
+        position: relative;
+        margin-left: 180px;
+    }
+
+    .redBtn img, .blackBtn img {
+        max-width: 214px;
+        width: 90%;
+    }
+
+    .helpGuide img {
+        padding-bottom: 30px;
+        margin-left: -19px;
+    }
+
+    .strikes img {
+        max-width: 73px;
+        width: 10%;
+        margin-bottom: 37px;
+        margin-left: -6px;
+        min-width: 73px;
+    }
+
+    .autoPlay {
+        width: 100%;
+        left: 54px;
+        max-width: 900px;
+        position: relative;
+        margin: 0 auto;
+        bottom: -67px;
+    }
+
+    .autoPlay img {
+        max-width: 79px;
+        min-width: 60px;
+        width: 6.5%;
+    }
+
+    .preLoader img {
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        border: 2px solid #81f937;
+        position: absolute;
+        top: 45%;
+        left: 46.5%;
+        z-index: 1000;
+        position: fixed;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .dependent_on_screen, .helpW {
+        background-size: contain;
+        height: auto;
+        min-height: 720px;
+
+    }
+
+    .controlsWrapper {
+        bottom: 5px;
+    }
+
+    .cardV, .cardX {
+        margin-left: 90px;
+        margin-top: 4px;
+    }
+
+    .game {
+        padding-bottom: 60px;
+    }
+
+    .dependent_on_screen {
+        background-image: url(../../Images/RED_or_BLACK_Mobile_bg.jpg);
+        top: 60px;
+    }
+
+    .helpW {
+        width: 0;
+        background-image: url(../../Images/RED_or_BLACK_Mobile_Help.png);
+    }
+
+    .header {
+        padding-top: 1em;
+        font-size: 1.3em;
+    }
+
+    .game_controls {
+        bottom: 570px;
+        padding-left: 350px;
+        background: #191919;
+        height: 60px;
+    }
+
+    .cards {
+        width: 30%;
+        position: relative;
+    }
+
+    .cards img {
+        max-width: 125px;
+        width: 70%;
+        top: -4px;
+        left: 25px;
+    }
+
+    .main_control {
+        left: 4px;
+        top: -8px;
+    }
+
+    .redBtn, .blackBtn {
+        width: 30%;
+    }
+
+    .blackBtn {
+        float: right !important;
+        margin-left: 0;
+        left: 5px;
+    }
+
+    .helpGuide > img {
+        margin-left: -60px;
+    }
+
+    .strikes img {
+        margin-top: 8px;
+    }
+
+    .autoPlay {
+        left: 300px;
+        bottom: 630px;
+    }
+
+    .autoPlay img {
+        max-width: 79px;
+        min-width: 60px;
+        width: 6.5%;
+    }
+
+    #logo {
+        max-width: 60px;
+        top: auto;
+        top: initial;
+    }
+
+    .sentence {
+        width: 96%;
+        padding-right: 3%;
+        padding-left: 3%;
+        font-size: 14px;
+    }
+
+    .preLoader img {
+        border-radius: 50%;
+        width: 65px;
+        height: 65px;
+        border: 2px solid #81f937;
+        position: fixed;
+        top: 47%;
+        left: 45%;
+        z-index: 1000;
+    }
+
+    .steps {
+        width: 498px;
+        height: 646px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 368%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .dependent_on_screen, .helpW {
+        min-height: 600px;
+    }
+
+    .main_control {
+        top: -78px;
+    }
+
+    .cardV, .cardX {
+        margin-left: 90px;
+        margin-top: 4px;
+    }
+
+    .game_controls {
+        max-width: 100%;
+        bottom: 509px;
+        padding-left: 200px;
+        min-width: 100%;
+    }
+
+    #logo {
+        max-width: 74px;
+    }
+
+    .cards img {
+        top: 0;
+        left: 0;
+    }
+
+    .autoPlay {
+        left: 220px;
+        bottom: 569px;
+    }
+
+    .preLoader img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        border: 2px solid #81f937;
+        position: fixed;
+        top: 41%;
+        left: 44%;
+        z-index: 1000;
+    }
+
+    .steps {
+        width: 389px;
+        height: 473px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 357%;
+    }
+
+    .helpGuide > img {
+        margin-left: 0;
+    }
+
+    .controlsWrapper {
+        bottom: -20px;
+    }
+}
