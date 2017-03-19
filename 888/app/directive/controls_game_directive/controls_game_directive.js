@@ -5,11 +5,11 @@ angular.module('app').directive('controlsGame', ['userService', function (userSe
     return {
         restrict: 'EA',
         replace: true,
-        templateUrl: '../app/directive/controls_game_directive/controls_game_directive.html',
+        templateUrl: './app/directive/controls_game_directive/controls_game_directive.html',
         link: function (scope, elem, attrs) {
-            scope.BlackImage = "../Images/Black_disabled.png"; // default image for black button
-            scope.RedImage = "../Images/Red_disabled.png";  // default image for red button
-            scope.strikes = "../Images/lives_02.png";  // default lives image in start game
+            scope.BlackImage = "./Images/Black_disabled.png"; // default image for black button
+            scope.RedImage = "./Images/Red_disabled.png";  // default image for red button
+            scope.strikes = "./Images/lives_02.png";  // default lives image in start game
             scope.isDisabledAutoPlay = false; // for disabled button auto play after user choose play regular game
             scope.isDisabledButtons = false; // for disabled buttons red and black after user choose play auto play mode
             scope.isAuto = false; // turn game to auto play mode on/off
@@ -28,28 +28,28 @@ angular.module('app').directive('controlsGame', ['userService', function (userSe
 
             scope.mouseEnter = function (color) {
                 if (color === 'red') {
-                    scope.RedImage = "../Images/Red_idle.png";
+                    scope.RedImage = "./Images/Red_idle.png";
                 }
                 else {
-                    scope.BlackImage = "../Images/Black_idle.png";
+                    scope.BlackImage = "./Images/Black_idle.png";
                 }
             };
 
             scope.mouseLeave = function (color) {
                 if (color === 'red') {
-                    scope.RedImage = "../Images/Red_disabled.png";
+                    scope.RedImage = "./Images/Red_disabled.png";
                 }
                 else {
-                    scope.BlackImage = "../Images/Black_disabled.png";
+                    scope.BlackImage = "./Images/Black_disabled.png";
                 }
             };
 
             scope.mouseDown = function (color) {
                 if (color === 'red') {
-                    scope.RedImage = "../Images/Red_Selected.png";
+                    scope.RedImage = "./Images/Red_Selected.png";
                 }
                 else {
-                    scope.BlackImage = "../Images/Black_Selected.png";
+                    scope.BlackImage = "./Images/Black_Selected.png";
                 }
             };
             // show tutorial on screen
@@ -133,7 +133,7 @@ angular.module('app').directive('controlsGame', ['userService', function (userSe
                         scope.changeClasses(cardX);
                     }, 800);
                     if (scope.strikeLimit === 1) {
-                        scope.strikes = "../Images/lives_00.png";
+                        scope.strikes = "./Images/lives_00.png";
                         scope.strikeLimit--;
                         scope.isDisabledButtons = true;
                         setTimeout(function () {
@@ -141,7 +141,7 @@ angular.module('app').directive('controlsGame', ['userService', function (userSe
                         }, 2500);
                     }
                     else {
-                        scope.strikes = "../Images/lives_01.png";
+                        scope.strikes = "./Images/lives_01.png";
                         scope.strikeLimit--;
                     }
                 }

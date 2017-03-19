@@ -4,14 +4,14 @@
         <span class="red"> Red</span> or Black - Pick Your Luck!
     </h1>
     <div class="preLoader">
-        <img id="pre" src="../Images/3Dchip_preloader.gif" height="50" width="50"/>
+        <img id="pre" src="./Images/3Dchip_preloader.gif" height="50" width="50"/>
     </div>
-    <div class="steps" ng-if="userWins > 0" style="background-image: url(../Images/RED_or_BLACK_PC_step_0{{userWins}}.png)">
+    <div class="steps" ng-if="userWins > 0" style="background-image: url(./Images/RED_or_BLACK_PC_step_0{{userWins}}.png)">
     </div>
     <div class="controlsWrapper">
         <div class="game_controls">
             <div id="helpBtn" class="helpGuide" ng-click="showGuide()">
-                <img src="../Images/info.png" height="67" width="53" title="help" alt/>
+                <img src="./Images/info.png" height="67" width="53" title="help" alt/>
             </div>
             <div class="strikes">
                 <img ng-src="{{strikes}}" height="53" width="93" alt title="Tries Left"/>
@@ -29,8 +29,8 @@
             </div>
             <div class="cards">
                 <img class="card_1 hidden1" ng-src="{{cardImage}}"  width="125" height="159"/>
-                <img class="cardX hidden1" src="../Images/Card_X.png" height="159" width="125"/>
-                <img class="cardV hidden1" src="../Images/Card_V.png" height="159" width="125"/>
+                <img class="cardX hidden1" src="./Images/Card_X.png" height="159" width="125"/>
+                <img class="cardV hidden1" src="./Images/Card_V.png" height="159" width="125"/>
             </div>
             <div class="blackBtn">
                 <img id="blackBtn" ng-src="{{BlackImage}}"
@@ -46,7 +46,7 @@
             <img class="autoPlayBtn"
                  ng-disabled="isDisabledAutoPlay"
                  ng-click="isDisabledAutoPlay || autoPlay()"
-                 src="../Images/autoplay.png"
+                 src="./Images/autoplay.png"
                  height="82" width="79" alt
                  title="AutoPlay"/>
         </div>
